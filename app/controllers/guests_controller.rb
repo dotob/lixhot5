@@ -1,13 +1,11 @@
 class GuestsController < ApplicationController
+
+	respond_to :html, :xml, :json
+
   # GET /guests
   # GET /guests.xml
   def index
-    @guests = Guest.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @guests }
-    end
+		respond_with(@guests = Guest.all)
   end
 
   # GET /guests/1
