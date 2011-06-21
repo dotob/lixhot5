@@ -1,6 +1,15 @@
 <h1>hello, lixhot!</h1>
 <%= form_tag :method => 'get' do %>
-	<%= text_field_tag :search, params[:search] %>
-	<%= submit_tag "go", :name => nil %>
+	<div id="one">
+		<%= email_field_tag :search, params[:search] %>
+	</div>
+	<div id="two">
+		<%= radio_button_tag(:iscoming, 1) %>ich komme<br />
+		<%= radio_button_tag(:iscoming, 0) %>ich komme nicht
+	</div>
+	<div id="three">
+		<% cities_array = Gift.all.map { |gift| ['%s für %s€' % [gift.name, gift.price], gift.id] } %>
+		<%= select_tag(:gift_id, options_for_select(cities_array)) %>
+	</div>
 <% end %>
 

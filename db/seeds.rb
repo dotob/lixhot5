@@ -233,3 +233,12 @@ Guest.create({:name => "Randi Zimmermann", :email => "Randi.Zimmermann@inform-ac
 Guest.create({:name => "Ralf Schoenemann", :email => "ralf@formdenker.de", :gift => nil})
 Guest.create({:name => "Sandra", :email => "sandra.damm@gmail.com", :gift => nil})
 Guest.create({:name => "Thilo Vogel", :email => "photos@lichtographie.de", :gift => nil})
+
+
+# gifts
+Gift.create({:name => "Kasten Bier", :price => 15})
+Gift.create({:name => "DJ-Anteil", :price => 10})
+Gift.create({:name => "DJ-Anteil", :price => 15})
+Gift.create({:name => "DJ-Anteil", :price => 20})
+Gift.create({:name => "Caipirinha", :price => 10})
+Gift.create({:name => "Wodka", :price => 10})
