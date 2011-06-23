@@ -1,7 +1,9 @@
 <h1>hello, lixhot!</h1>
-<%= form_tag :method => 'get' do %>
+<%= javascript_tag("$(function(){ memo.init(\"#{findguest_url}\"); });") %>
+<%= form_tag 'checkin', :method => 'get' do %>
 	<div id="one">
 		<%= email_field_tag :search, params[:search] %>
+		<%= hidden_field_tag 'guest_id', '-1' %>
 	</div>
 	<div id="two">
 		<%= radio_button_tag(:iscoming, 1) %>ich komme<br />
@@ -9,7 +11,8 @@
 	</div>
 	<div id="three">
 		<% cities_array = Gift.all.map { |gift| ['%s für %s€' % [gift.name, gift.price], gift.id] } %>
-		<%= select_tag(:gift_id, options_for_select(cities_array)) %>
+		<%= select_tag(:gift_id, options_for_select(cities_array)) %><br />
+		<%= submit_tag(value = "let's party") %>
 	</div>
 <% end %>
 

@@ -1,8 +1,9 @@
 Lixhot::Application.routes.draw do
   resources :guests
-	match 'findguest' => 'findguest#exists'
-
   resources :gifts
+
+	match 'findguest' => 'findguest#exists'
+	match 'checkin' => 'checkin#doit'
 
   get "home/index"
 

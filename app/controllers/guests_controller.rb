@@ -23,6 +23,7 @@ class GuestsController < ApplicationController
   # GET /guests/new.xml
   def new
     @guest = Guest.new
+		@gifts = Gift.all.map {|g| [g.name, g.id] }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -33,6 +34,7 @@ class GuestsController < ApplicationController
   # GET /guests/1/edit
   def edit
     @guest = Guest.find(params[:id])
+		@gifts = [] + Gift.all.map {|g| [g.name, g.id] }
   end
 
   # POST /guests

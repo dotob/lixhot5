@@ -2,6 +2,11 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 // check existing email then show step two
+var memo = { url: '',
+  init: function(url){
+    memo.url = url;
+  }
+}
 $(function(){
 	$("#search").focus();
 	$("#two").hide();
@@ -9,10 +14,11 @@ $(function(){
 		$("#two").hide();
 		var searchPattern = $(this).val();
             if (searchPattern.length > 0) {
-                $.getJSON('http://localhost:3000/findguest?search=' + searchPattern,
+                $.getJSON(memo.url + '?search=' + searchPattern,
                 	function (found) {
-										if (found){
+										if (found >= 0){
 											$("#two").show();
+											$("#guest_id").val(found);
                 		}
 									}
             		)

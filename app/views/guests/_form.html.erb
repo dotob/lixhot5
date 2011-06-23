@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :gift %><br />
-    <%= f.text_field :gift %>
+    <%= f.select :gift_id, @gifts, {:include_blank => true}%>
   </div>
   <div class="field">
     <%= f.label :iscoming %><br />
-    <%= f.text_field :iscoming %>
+    <%= f.check_box :iscoming %>
   </div>
   <div class="actions">
     <%= f.submit %>
