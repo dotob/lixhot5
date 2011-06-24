@@ -2,12 +2,14 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>name</th>
+    <th>bringt mit</th>
   </tr>
 
 <% @guests.each do |guest| %>
   <tr>
     <td><%= guest.name %></td>
+    <td><%= guest.gift.name %></td>
   </tr>
 <% end %>
 </table>
