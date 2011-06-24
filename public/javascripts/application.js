@@ -28,12 +28,14 @@ $(function(){
 
 // expect iscoming true then show step three
 $(function(){
-  $("#three").hide();
+  $("#three_yes,#three_no").hide();
   $("#iscoming_0,#iscoming_1").live("change", function(){
-    $("#three").hide(); 
+    $("#three_yes,#three_no").hide(); 
     var iscoming = $(this).val(); 
             if (iscoming == 1) {
-            	$("#three").show();
-            }
+            	$("#three_yes").show();
+            } else{
+            	$("#three_no").show();
+						}
   });
 });
