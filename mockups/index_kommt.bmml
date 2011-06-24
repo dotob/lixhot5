@@ -1,0 +1,64 @@
+<mockup version="1.0" skin="sketch" measuredW="1145" measuredH="607" mockupW="1085" mockupH="587">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="60" y="20" w="1085" h="587" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>lixhot%0Alixhot.de</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::FieldSet" x="250" y="214" w="-1" h="-1" measuredW="200" measuredH="170" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1.</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::FieldSet" x="464" y="214" w="-1" h="-1" measuredW="200" measuredH="170" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2.</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::FieldSet" x="678" y="214" w="-1" h="-1" measuredW="200" measuredH="170" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>3.</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="257" y="261" w="-1" h="-1" measuredW="98" measuredH="23" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>email%20oder%20code</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextInput" x="257" y="285" w="178" h="-1" measuredW="79" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="479" y="260" w="-1" h="-1" measuredW="66" measuredH="23" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>hi%2C%20%3Cname%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="479" y="284" w="-1" h="-1" measuredW="149" measuredH="46" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28o%29%20ja%20ich%20komme%0A%28%20%29%20nein%20ich%20komme%20nicht</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="687" y="238" w="-1" h="-1" measuredW="63" measuredH="23" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>ich%20bringe</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="687" y="352" w="-1" h="-1" measuredW="24" measuredH="23" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>mit</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="703" y="261" w="-1" h="-1" measuredW="121" measuredH="92" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28o%29%20kasten%20bier%2C%2015%u20AC%0A%28%20%29%20dj-anteil%2C%2020%u20AC%0A%28%20%29%20dj-anteil%2C%2015%u20AC%0A%28%20%29%20caipirinha%2C%2010%u20AC</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="784" y="349" w="-1" h="-1" measuredW="85" measuredH="28" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>lets%20party</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

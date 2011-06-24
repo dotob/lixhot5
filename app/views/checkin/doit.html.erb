@@ -1,0 +1,8 @@
+<h1>hi <% @guest.name %></h1> 
+
+<% if @guest.iscoming %>
+	<h1>super, daß du kommst</h1>
+<% else %>
+	<h1>schade daß du nicht kommst</h1>
+<% end %>
+<%= link_to 'zurück', '/' %>
