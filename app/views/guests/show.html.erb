@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>ID:</b>
+  <%= @guest.id %>
+</p>
+
+<p>
   <b>Name:</b>
   <%= @guest.name %>
 </p>
@@ -12,7 +17,7 @@
 
 <p>
   <b>Gift:</b>
-  <%= @guest.gift %>
+  <%= @guest.gift.name+" ["+@guest.gift.id.to_s+"]" if @guest.gift %>
 </p>
 
 <p>

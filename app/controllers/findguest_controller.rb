@@ -4,9 +4,10 @@ class FindguestController < ApplicationController
 	def exists
 		@found = Guest.find_by_email(params[:search])
 		if @found
-			respond_with(@found.id)
+			result = [@found , @found.gift]
 		else
-			respond_with(-1)
+			result = @found
 		end
+		respond_with(result)
 	end
 end
