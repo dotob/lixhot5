@@ -50,11 +50,11 @@ html, body{
 
  
 #one_frame, #two_frame, #three_frame{
-	height: 200px;
+	height: 250px;
 	border-width: 1px;
 	border-color: #999;
 	border-style: solid;
-	width: 200px;
+	width: 250px;
 	float: left;
 	margin: 5px;
 	display: table;

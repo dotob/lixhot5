@@ -28,6 +28,7 @@ $(function(){
 											// if guest already logged in select if he wanted to come or not
 											if (found[0].guest.iscoming != null){
 												found[0].guest.iscoming ? $("#iscoming_1").attr("checked","checked") : $("#iscoming_0").attr("checked","checked");
+												found[0].guest.iscoming ? $("#three_yes").fadeIn() : $("#three_no").fadeIn();
 											} else {
 												// if guest hadnt logged in in the past reset radio buttons
 												$("#iscoming_0, #iscoming_1").attr("checked", false)	

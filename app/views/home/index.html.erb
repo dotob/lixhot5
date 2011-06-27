@@ -12,7 +12,7 @@
 			<%= form_tag 'checkin', :method => 'get' do %>
 				<div id="one_frame">
 					<div id="one">
-						<%= label_tag ' deine email' %>
+						<%= label_tag ' deine email:' %>
 						<%= email_field_tag :search, params[:search] %>
 						<%= hidden_field_tag 'guest_id', '-1' %>
 					</div>
@@ -25,6 +25,10 @@
 				</div>
 				<div id="three_frame">
 					<div id="three_yes">
+						<%= label_tag '  wenn du uns was sagen möchtest:' %>
+						<%= text_area_tag(:message, nil, :size => "25x9") %>
+						<br />
+						<%= label_tag '  dein partyanteil:' %>
 						<%= select_tag(:gift_id, options_for_select(@somegifts.map { |gift| ['%s für %s€' % [gift.name, gift.price], gift.id] if gift.guest.nil?}) ) %><br />
 						<%= submit_tag(value = "let's party") %>
 					</div>
