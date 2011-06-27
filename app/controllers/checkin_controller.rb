@@ -11,6 +11,7 @@ class CheckinController < ApplicationController
 			else
 				@guest.iscoming = false;
 			end
+			@guest.message = params[:message]
 			@guest.save
 		end
 		respond_with(@guest)

@@ -20,6 +20,8 @@ $(function(){
 											$("#two").fadeIn();
 											// set hidden field guest_id
 											$("#guest_id").val(found[0].guest.id);
+											// show message
+											$("#message").val(found[0].guest.message);
 											// add gift of guest and select it if guest comes here again
 											if(found[1] != null){
 												$("<option value=\""+found[1].gift.id+"\">"+found[1].gift.name+" für "+found[1].gift.price+"€</option>").appendTo("#gift_id");

@@ -233,6 +233,8 @@ Guest.create({:name => "Randi Zimmermann", :email => "Randi.Zimmermann@inform-ac
 Guest.create({:name => "Ralf Schoenemann", :email => "ralf@formdenker.de", :gift => nil})
 Guest.create({:name => "Sandra", :email => "sandra.damm@gmail.com", :gift => nil})
 Guest.create({:name => "Thilo Vogel", :email => "photos@lichtographie.de", :gift => nil})
+Guest.create({:name => "Max Heidbüchel", :email => "maxx@riesentyp.de", :gift => nil})
+Guest.create({:name => "Anja Späker", :email => "aranja@web.de", :gift => nil})
 
 
 # gifts

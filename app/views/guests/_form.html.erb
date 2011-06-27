@@ -27,7 +27,15 @@
     <%= f.label :iscoming %><br />
     <%= f.check_box :iscoming %>
   </div>
-  <div class="actions">
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </div>
+   <div class="field">
+    <%= f.label :message %><br />
+    <%= f.text_area :message %>
+  </div>
+   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
