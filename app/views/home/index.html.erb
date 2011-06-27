@@ -1,22 +1,42 @@
-<h1>hello, lixhot!</h1>
-<%= link_to 'wer kommt', whoscoming_path %>
-<%= javascript_tag("$(function(){ memo.init(\"#{findguest_url}\"); });") %>
-<%= form_tag 'checkin', :method => 'get' do %>
-	<div id="one">
-		<%= label_tag 'deine email' %>
-		<%= email_field_tag :search, params[:search] %>
-		<%= hidden_field_tag 'guest_id', '-1' %>
+<%= javascript_include_tag 'main' %>
+
+<div id="pagewidth" >
+	<div id="header">
+		<%= image_tag "lixhot5_logo.png", :alt => "logo" %>
 	</div>
-	<div id="two">
-		<%= radio_button_tag(:iscoming, 1) %>ich komme<br />
-		<%= radio_button_tag(:iscoming, 0) %>ich komme nicht
+	<div id="wrapper" class="clearfix">
+		<div id="maincol">
+			<%= link_to 'wer kommt', whoscoming_path %>
+
+			<%= javascript_tag("$(function(){ memo.init(\"#{findguest_url}\"); });") %>
+			<%= form_tag 'checkin', :method => 'get' do %>
+				<div id="one_frame">
+					<div id="one">
+						<%= label_tag ' deine email' %>
+						<%= email_field_tag :search, params[:search] %>
+						<%= hidden_field_tag 'guest_id', '-1' %>
+					</div>
+				</div>
+				<div id="two_frame">
+				 <div id="two">
+			 			<%= radio_button_tag(:iscoming, 1) %>ich komme<br />
+						<%= radio_button_tag(:iscoming, 0) %>ich komme nicht
+					</div>
+				</div>
+				<div id="three_frame">
+					<div id="three_yes">
+						<%= select_tag(:gift_id, options_for_select(@somegifts.map { |gift| ['%s für %s€' % [gift.name, gift.price], gift.id] if gift.guest.nil?}) ) %><br />
+						<%= submit_tag(value = "let's party") %>
+					</div>
+					<div id="three_no">
+						<%= submit_tag(value = "sorry no party") %>
+					</div>
+				</div>
+			<% end %>
+
+		</div>
+	<div id="footer">
+		<span id="cr">&copy; lixhot family, 2011</span>
 	</div>
-	<div id="three_yes">
-		<%= select_tag(:gift_id, options_for_select(@somegifts.map { |gift| ['%s für %s€' % [gift.name, gift.price], gift.id] if gift.guest.nil?}) ) %><br />
-		<%= submit_tag(value = "let's party") %>
-	</div>
-	<div id="three_no">
-		<%= submit_tag(value = "sorry no party") %>
-	</div>
-<% end %>
+</div>
 
