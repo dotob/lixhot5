@@ -5,6 +5,7 @@ class CheckinController < ApplicationController
 	def doit
     @guest = Guest.find(params[:guest_id])
 		if @guest
+			@guest.message = params[:message]
 			if params[:iscoming] == "1"
 				@guest.iscoming = true;
 				@guest.gift_id = params[:gift_id]
@@ -12,7 +13,7 @@ class CheckinController < ApplicationController
 			else
 				@guest.iscoming = false;
 			end
-			@guest.message = params[:message]
+			GiftMailer.registration_confirmation_to_us(@guest).deliver
 			@guest.save
 		end
 		respond_with(@guest)

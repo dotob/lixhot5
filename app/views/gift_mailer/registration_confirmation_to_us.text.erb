@@ -1,0 +1,8 @@
+<% if @guest.iscoming %>
+	<%= @guest.name %> kommt und bringt <%= @guest.gift.name %> für <%= @guest.gift.price %>€ als geschenk 
+<% else %>
+	<%= @guest.name %> kommt nicht 
+<% end %>
+
+seine nachricht:
+<%= @guest.message %>
