@@ -9,11 +9,11 @@ class CheckinController < ApplicationController
 			if params[:iscoming] == "1"
 				@guest.iscoming = true;
 				@guest.gift_id = params[:gift_id]
-				GiftMailer.registration_confirmation(@guest).deliver
+				MultiMailer.checkin_confirmation(@guest).deliver
 			else
 				@guest.iscoming = false;
 			end
-			GiftMailer.registration_confirmation_to_us(@guest).deliver
+			MultiMailer.checkin_confirmation_to_us(@guest).deliver
 			@guest.save
 		end
 		respond_with(@guest)
