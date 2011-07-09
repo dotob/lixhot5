@@ -10,4 +10,17 @@ class MultiMailer < ActionMailer::Base
     @guest = guest
     mail(:to => guest.email, :subject => "lixhot 5, neue anmeldung")  
   end
+
+  def wannabe_a_guest(name, email, text)  
+		@name = name
+		@email = email
+		@text = text
+    mail(:to => "wir@lixhot.de", :subject => "lixhot 5, mitfeiern")  
+  end
+
+  def mmcheckin_confirmation_to_us(guest)  
+    @guest = guest
+    mail(:to => guest.email, :subject => "lixhot 5, neue anmeldung")  
+  end
 end
+

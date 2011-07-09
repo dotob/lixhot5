@@ -236,6 +236,20 @@ Guest.create({:name => "Thilo Vogel", :email => "photos@lichtographie.de", :gift
 Guest.create({:name => "Max Heidbüchel", :email => "maxx@riesentyp.de", :gift => nil})
 Guest.create({:name => "Anja Späker", :email => "aranja@web.de", :gift => nil})
 
+Guest.create({:name => "Julia Harnacke", :email => "harnacke_julia@yahoo.de", :gift => nil})
+Guest.create({:name => "Kim Selle", :email => "kim.selle@gmx.de", :gift => nil})
+Guest.create({:name => "Marc Flegel", :email => "marcflegel@gmx.de", :gift => nil})
+Guest.create({:name => "Nina Koebrügge", :email => "ninak_sta@hotmail.com", :gift => nil})
+Guest.create({:name => "Vera Johanna Offermanns", :email => "Vera.Offermanns@rwth-aachen.de", :gift => nil})
+Guest.create({:name => "Anne-Christin Boll", :email => "A-C.Boll@gmx.net", :gift => nil})
+Guest.create({:name => "Matthias Buhl", :email => "m.buhl@dokom.net", :gift => nil})
+Guest.create({:name => "Nils Hammesfahr", :email => "n.hammesfahr@web.de", :gift => nil})
+Guest.create({:name => "Till klein Rudack", :email => "till.rudack@web.de", :gift => nil})
+Guest.create({:name => "till groß hellenkamp", :email => "tillhellenkamp@gmx.de", :gift => nil})
+Guest.create({:name => "Matthias Weckelmann", :email => "m.weckelmann@gmx.de", :gift => nil})
+Guest.create({:name => "Ellen Buhl", :email => "ellen.buhl@gmx.de", :gift => nil})
+Guest.create({:name => "Katrin Buhl", :email => "katrin.buhl@gmx.net", :gift => nil})
+Guest.create({:name => "Jule Kötter", :email => "jule.koetter@googlemail.com", :gift => nil})
 
 # gifts
 Gift.create({:name => "Kasten Bier", :price => 15})

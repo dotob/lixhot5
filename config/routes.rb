@@ -5,6 +5,8 @@ Lixhot::Application.routes.draw do
 	match 'findguest' => 'findguest#exists'
 	match 'checkin' => 'checkin#doit'
 	match 'whoscoming' => 'whoscoming#doit'
+	match 'wannabeaguest' => 'wannabe_a_guest#index'
+	match 'wannabeaguest/doit' => 'wannabe_a_guest#doit'
 
   get "home/index"
 
