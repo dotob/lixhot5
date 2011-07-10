@@ -18,9 +18,9 @@ class MultiMailer < ActionMailer::Base
     mail(:to => "wir@lixhot.de", :subject => "lixhot 5, mitfeiern")  
   end
 
-  def mmcheckin_confirmation_to_us(guest)  
-    @guest = guest
-    mail(:to => guest.email, :subject => "lixhot 5, neue anmeldung")  
+  def mass_mailer(guest, subject, text)  
+    @text = text
+    mail(:to => guest.email, :subject => subject)  
   end
 end
 

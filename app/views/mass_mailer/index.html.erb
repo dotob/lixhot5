@@ -1,0 +1,16 @@
+<h1>mass mailer</h1>
+<%= form_tag 'massmailer/doit', :method => 'get' do %>
+		<%= label_tag ' an wen:' %>
+<br >
+		<%= select_tag(:to, options_for_select([['alle', 1], ['die kommen', 2], ['die nicht kommen', 3], ['die eingechecked sind', 4], ['die nicht eingechecked sind', 5]]) ) %><br />
+<br >
+		<%= label_tag ' subject:' %>
+<br >
+		<%= text_field_tag(:subject) %>
+<br >
+		<%= label_tag ' text:' %>
+<br >
+		<%= text_area_tag(:text, nil, :size => "55x29") %>
+<br />
+		<%= submit_tag(value = "versenden") %>
+<% end %>

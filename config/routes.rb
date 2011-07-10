@@ -7,6 +7,8 @@ Lixhot::Application.routes.draw do
 	match 'whoscoming' => 'whoscoming#doit'
 	match 'wannabeaguest' => 'wannabe_a_guest#index'
 	match 'wannabeaguest/doit' => 'wannabe_a_guest#doit'
+	match 'massmailer' => 'mass_mailer#index'
+	match 'massmailer/doit' => 'mass_mailer#doit'
 
   get "home/index"
 
