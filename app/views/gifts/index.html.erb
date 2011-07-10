@@ -4,7 +4,8 @@
   <tr>
     <th>Name</th>
     <th>Price</th>
-    <th>Who bringing</th>
+    <th>Whos bringing</th>
+    <th>Guest Count</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= gift.name %></td>
     <td><%= gift.price %></td>
     <td><%= gift.guest.name if gift.guest %></td>
+    <td><%= gift.guest_count %></td>
     <td><%= link_to 'Show', gift %></td>
     <td><%= link_to 'Edit', edit_gift_path(gift) %></td>
     <td><%= link_to 'Destroy', gift, :confirm => 'Are you sure?', :method => :delete %></td>
