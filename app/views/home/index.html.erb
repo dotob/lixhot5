@@ -6,7 +6,7 @@
 	</div>
 	<div id="wrapper" class="clearfix">
 		<div id="maincol">
-			<%= link_to 'wer kommt', whoscoming_path %>
+			<%= link_to 'wer kommt', whoscoming_path %> | 
 			<%= link_to 'hab keine einladung, aber will feiern', wannabeaguest_path %>
 
 			<%= javascript_tag("$(function(){ memo.init(\"#{findguest_url}\"); });") %>
@@ -41,6 +41,11 @@
 
 		</div>
 	<div id="footer">
+		<div id="fb-root"></div>
+		<script src="http://connect.facebook.net/en_US/all.js#appId=221316861226138&amp;xfbml=1"></script>
+		<fb:like href="lixhot.de" send="false" width="450" show_faces="true" colorscheme="dark" font="" />
+	</div>
+	<div id="footer2">
 		<span id="cr">&copy; lixhot family, 2011</span>
 	</div>
 </div>

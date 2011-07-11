@@ -56,18 +56,25 @@ html, body{
 	border-style: solid;
 	width: 250px;
 	float: left;
-	margin: 5px;
+	margin: 5px 10px 5px 0px;
 	display: table;
   position: relative; 
 }
 
 #footer{
+ height:90; 
+ clear:both;
+ display:block;
+ overflow:auto;
+} 
+
+#footer2{
  height:100px; 
  clear:both;
  display:block;
  overflow:auto;
 } 
- 
+  
 #cr{
 	text-align: right;
 }
