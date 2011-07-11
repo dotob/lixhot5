@@ -1,11 +1,15 @@
+<h1>mitfeiern ohne einladung</h1>
 <%= form_tag 'wannabeaguest/doit', :method => 'get' do %>
 		<%= label_tag ' dein name:' %>
+<br >
 		<%= text_field_tag :name %>
 <br >
 		<%= label_tag ' deine email:' %>
+<br >
 		<%= email_field_tag :email %>
 <br />
 		<%= label_tag ' warum du mitfeiern möchtest:' %>
+<br >
 		<%= text_area_tag(:text, nil, :size => "25x9") %>
 <br />
 		<%= submit_tag(value = "mitmachen") %>
