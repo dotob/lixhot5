@@ -10,14 +10,15 @@
 			<%= link_to 'hab keine einladung, aber will feiern', wannabeaguest_path %>
 
 			<%= javascript_tag("$(function(){ memo.init(\"#{findguest_url}\"); });") %>
-			<%= form_tag 'checkin', :method => 'get' do %>
+			<div>
 				<div id="one_frame">
 					<div id="one">
 						<%= label_tag ' deine email:' %>
 						<%= email_field_tag :search, params[:search] %>
-						<%= hidden_field_tag 'guest_id', '-1' %>
 					</div>
 				</div>
+			<%= form_tag 'checkin', :method => 'get' do %>
+				<%= hidden_field_tag 'guest_id', '-1' %>
 				<div id="two_frame">
 				 <div id="two">
 			 			<%= radio_button_tag(:iscoming, 1) %>ich komme<br />
@@ -37,6 +38,7 @@
 						<%= submit_tag(value = "sorry no party") %>
 					</div>
 				</div>
+			</div>
 			<% end %>
 
 		</div>
