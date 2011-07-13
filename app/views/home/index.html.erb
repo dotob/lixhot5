@@ -2,30 +2,32 @@
 
 <div id="pagewidth" >
 	<div id="header">
-		<%= image_tag "lixhot5_logo.png", :alt => "logo" %>
+		<a href="http://lixhot.de"><%= image_tag "lixhot5_logo.png", :alt => "logo" %></a>
 	</div>
 	<div id="wrapper" class="clearfix">
 		<div id="maincol">
-			<%= link_to 'wer kommt', whoscoming_path %> | 
-			<%= link_to 'hab keine einladung, aber will feiern', wannabeaguest_path %>
 
 			<%= javascript_tag("$(function(){ memo.init(\"#{findguest_url}\"); });") %>
 			<div>
 				<div id="one_frame">
 					<div id="one">
 						<%= label_tag ' deine email:' %>
-						<%= email_field_tag :search, params[:search] %>
+						<%= email_field_tag :search, params[:search] %><br />
+						gib hier die email adresse ein an die wir dir geschrieben haben<br />
+						pärchen einzeln anmelden
 					</div>
 				</div>
 			<%= form_tag 'checkin', :method => 'get' do %>
 				<%= hidden_field_tag 'guest_id', '-1' %>
 				<div id="two_frame">
+				 <div id="two_link"><%= link_to 'wer kommt', whoscoming_path, :id => "whocomes" %> </div>
 				 <div id="two">
 			 			<%= radio_button_tag(:iscoming, 1) %>ich komme<br />
 						<%= radio_button_tag(:iscoming, 0) %>ich komme nicht
 					</div>
 				</div>
 				<div id="three_frame">
+					<div id="three_link"><%= link_to 'hab keine einladung, aber will feiern', wannabeaguest_path, :id => "wannabeaguest"  %></div>
 					<div id="three_yes">
 						<%= label_tag '  wenn du uns was sagen möchtest:' %>
 						<%= text_area_tag(:message, nil, :size => "25x9") %>

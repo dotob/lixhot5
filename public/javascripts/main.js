@@ -17,6 +17,7 @@ $(function(){
                 	function (found) {
 										if (found){
 											// if there is guest found, show step two
+											$("#two_link").hide();
 											$("#two").fadeIn();
 											// set hidden field guest_id
 											$("#guest_id").val(found[0].guest.id);
@@ -31,6 +32,7 @@ $(function(){
 											if (found[0].guest.iscoming != null){
 												found[0].guest.iscoming ? $("#iscoming_1").attr("checked","checked") : $("#iscoming_0").attr("checked","checked");
 												found[0].guest.iscoming ? $("#three_yes").fadeIn() : $("#three_no").fadeIn();
+												$("#three_link").hide();
 											} else {
 												// if guest hadnt logged in in the past reset radio buttons
 												$("#iscoming_0, #iscoming_1").attr("checked", false)	
@@ -48,6 +50,7 @@ $(function(){
   $("#iscoming_0,#iscoming_1").live("change", function(){
     $("#three_yes,#three_no").hide(); 
     var iscoming = $(this).val(); 
+						$("#three_link").hide();
             if (iscoming == 1) {
             	$("#three_yes").fadeIn();
             } else{

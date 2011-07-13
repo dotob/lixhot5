@@ -28,33 +28,19 @@ html, body{
  position: relative; 
 }
 
-#one, #two, #three_yes, #three_no{
+#one, #two, #three_yes, #three_no, #two_link, #three_link{
 	display: table-cell;
 	top: 50%;
-	display: table-cell; 
 	vertical-align: middle;
 	padding: 5px;
 }
 
-#one{
-}
-
-#two{
-}
-
-#three_yes{
-}
-
-#three_no{
-}
-
- 
 #one_frame, #two_frame, #three_frame{
 	height: 250px;
 	border-width: 1px;
 	border-color: #999;
 	border-style: solid;
-	width: 250px;
+	width: 300px;
 	float: left;
 	margin: 5px 10px 5px 0px;
 	display: table;
