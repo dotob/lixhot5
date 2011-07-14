@@ -2,7 +2,7 @@ class FindguestController < ApplicationController
 	respond_to :html, :xml, :json
 
 	def exists
-		@found = Guest.find_by_email(params[:search])
+		@found = Guest.where("lower(email) = ?", params[:search].downcase).at(0)
 		if @found
 			result = [@found , @found.gift]
 		else

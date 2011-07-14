@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lixhot</title>
+  <title>//lixhot</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
@@ -12,7 +12,29 @@
 </head>
 <body>
 
+
+<div id="pagewidth" >
+	<div id="header">
+		<a href="http://lixhot.de"><%= image_tag "lixhot5_logo.png", :alt => "logo" %></a>
+	</div>
+	<div id="wrapper" class="clearfix">
+		<div id="maincol">
+
+
 <%= yield %>
 
+
+		</div>
+		<div id="footer">
+			<div id="fb-root"></div>
+			<script src="http://connect.facebook.net/en_US/all.js#appId=221316861226138&amp;xfbml=1"></script>
+			<fb:like href="lixhot.de" send="false" width="450" show_faces="true" colorscheme="dark" font="" />
+		</div>
+		<div id="footer2">
+			<span id="cr">&copy; lixhot family, 2011</span>
+		</div>
+	</div>
+
+</div>
 </body>
 </html>

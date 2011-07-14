@@ -1,56 +1,42 @@
 <%= javascript_include_tag 'main' %>
 
-<div id="pagewidth" >
-	<div id="header">
-		<a href="http://lixhot.de"><%= image_tag "lixhot5_logo.png", :alt => "logo" %></a>
-	</div>
-	<div id="wrapper" class="clearfix">
-		<div id="maincol">
-
-			<%= javascript_tag("$(function(){ memo.init(\"#{findguest_url}\"); });") %>
-			<div>
-				<div id="one_frame">
-					<div id="one">
-						<%= label_tag ' deine email:' %>
-						<%= email_field_tag :search, params[:search] %><br />
-						gib hier die email adresse ein an die wir dir geschrieben haben<br />
-						pärchen einzeln anmelden
-					</div>
-				</div>
-			<%= form_tag 'checkin', :method => 'get' do %>
-				<%= hidden_field_tag 'guest_id', '-1' %>
-				<div id="two_frame">
-				 <div id="two_link"><%= link_to 'wer kommt', whoscoming_path, :id => "whocomes" %> </div>
-				 <div id="two">
-			 			<%= radio_button_tag(:iscoming, 1) %>ich komme<br />
-						<%= radio_button_tag(:iscoming, 0) %>ich komme nicht
-					</div>
-				</div>
-				<div id="three_frame">
-					<div id="three_link"><%= link_to 'hab keine einladung, aber will feiern', wannabeaguest_path, :id => "wannabeaguest"  %></div>
-					<div id="three_yes">
-						<%= label_tag '  wenn du uns was sagen möchtest:' %>
-						<%= text_area_tag(:message, nil, :size => "25x9") %>
-						<br />
-						<%= label_tag '  dein partyanteil:' %>
-						<%= select_tag(:gift_id, options_for_select(@somegifts.map { |gift| ['%s für %s€' % [gift.name, gift.price], gift.id] if gift.guest.nil?}) ) %><br />
-						<%= submit_tag(value = "let's party") %>
-					</div>
-					<div id="three_no">
-						<%= submit_tag(value = "sorry no party") %>
-					</div>
-				</div>
-			</div>
-			<% end %>
-
+<%= javascript_tag("$(function(){ memo.init(\"#{findguest_url}\"); });") %>
+<div id="rectangles">
+	<div id="one_frame">
+		<div id="one">
+			<%= label_tag ' deine email:' %>
+			<%= email_field_tag :search, params[:search] %><br />
+			gib hier die email adresse ein an die wir dir geschrieben haben<br />
+			pärchen einzeln anmelden
 		</div>
-	<div id="footer">
-		<div id="fb-root"></div>
-		<script src="http://connect.facebook.net/en_US/all.js#appId=221316861226138&amp;xfbml=1"></script>
-		<fb:like href="lixhot.de" send="false" width="450" show_faces="true" colorscheme="dark" font="" />
 	</div>
-	<div id="footer2">
-		<span id="cr">&copy; lixhot family, 2011</span>
-	</div>
+
+	<%= form_tag 'checkin', :method => 'get' do %>
+		<%= hidden_field_tag 'guest_id', '-1' %>
+	
+		<div id="two_frame">
+			<div id="two_link"><%= link_to 'wer kommt', whoscoming_path, :id => "whocomes" %> </div>
+			<div id="two">
+ 				<%= radio_button_tag(:iscoming, 1) %>ich komme<br />
+				<%= radio_button_tag(:iscoming, 0) %>ich komme nicht
+			</div>
+		</div>
+
+		<div id="three_frame">
+			<div id="three_link"><%= link_to 'hab keine einladung, aber will feiern', wannabeaguest_path, :id => "wannabeaguest"  %></div>
+			<div id="three_yes">
+				<%= label_tag '  wenn du uns was sagen möchtest:' %>
+				<%= text_area_tag(:message, nil, :size => "25x9") %>
+				<br />
+				<%= label_tag '  dein partyanteil:' %>
+				<%= select_tag(:gift_id, options_for_select(@somegifts.map { |gift| ['%s für %s€' % [gift.name, gift.price], gift.id] if gift.guest.nil?}) ) %><br />
+				<%= submit_tag(value = "let's party") %>
+			</div>
+			<div id="three_no">
+				<%= submit_tag(value = "sorry no party") %>
+			</div>
+		</div>
+	<% end %> <!-- of form -->
 </div>
+
 
