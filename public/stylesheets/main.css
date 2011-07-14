@@ -30,6 +30,7 @@ html, body{
 
 #one, #two, #three_yes, #three_no, #two_link, #three_link{
 	display: table-cell;
+	text-align: center;
 	top: 50%;
 	vertical-align: middle;
 	padding: 5px;
@@ -42,7 +43,7 @@ html, body{
 	border-style: solid;
 	width: 300px;
 	float: left;
-	margin: 5px 10px 5px 0px;
+	margin: 35px 10px 35px 0px;
 	display: table;
   position: relative; 
 }

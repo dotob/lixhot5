@@ -6,8 +6,6 @@
 		<div id="one">
 			<%= label_tag ' deine email:' %>
 			<%= email_field_tag :search, params[:search] %><br />
-			<span class="tinymessage">gib hier die email adresse ein, an die wir dir geschrieben haben</span><br />
-			<span class="tinymessage">pärchen einzeln anmelden</span>
 		</div>
 	</div>
 
@@ -15,7 +13,7 @@
 		<%= hidden_field_tag 'guest_id', '-1' %>
 	
 		<div id="two_frame">
-			<div id="two_link"><%= link_to 'wer kommt', whoscoming_path, :id => "whocomes" %> </div>
+			<div id="two_link"><%= link_to 'gucken wer mitfeiert', whoscoming_path, :id => "whocomes" %> </div>
 			<div id="two">
  				<%= radio_button_tag(:iscoming, 1) %>ich komme<br />
 				<%= radio_button_tag(:iscoming, 0) %>ich komme nicht
@@ -23,7 +21,7 @@
 		</div>
 
 		<div id="three_frame">
-			<div id="three_link"><%= link_to 'hab keine einladung, aber will feiern', wannabeaguest_path, :id => "wannabeaguest"  %></div>
+			<div id="three_link"><%= link_to 'keine einladung aber partylust', wannabeaguest_path, :id => "wannabeaguest"  %></div>
 			<div id="three_yes">
 				<%= label_tag '  wenn du uns was sagen möchtest:' %>
 				<%= text_area_tag(:message, nil, :size => "25x9") %>

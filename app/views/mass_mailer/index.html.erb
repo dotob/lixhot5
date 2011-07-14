@@ -2,7 +2,11 @@
 <%= form_tag 'massmailer/doit', :method => 'get' do %>
 		<%= label_tag ' an wen:' %>
 <br >
-		<%= select_tag(:to, options_for_select([['alle', 1], ['die kommen', 2], ['die nicht kommen', 3], ['die eingechecked sind', 4], ['die nicht eingechecked sind', 5]]) ) %><br />
+		<%= select_tag(:to, options_for_select([['---', 0], ['alle', 1], ['die kommen', 2], ['die nicht kommen', 3], ['die eingechecked sind', 4], ['die nicht eingechecked sind', 5]]) ) %>
+<br />
+		<%= select_tag(:guest_id, options_for_select(@guests.map { |g| ['%s' % [g.name], g.id] })) %>
+<br >
+		<%= text_field_tag(:guest_ids) %>
 <br >
 		<%= label_tag ' subject:' %>
 <br >
