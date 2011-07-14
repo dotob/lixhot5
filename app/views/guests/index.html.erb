@@ -1,4 +1,4 @@
-<h1>Listing guests</h1>
+<h1>Listing guests (<%= @guests.count %>)</h1>
 
 <table>
   <tr>
@@ -15,7 +15,7 @@
   <tr>
     <td><%= guest.name %></td>
     <td><%= guest.email %></td>
-    <td><%= guest.gift.name if guest.gift %></td>
+    <td><%= guest.gift.name+"=>"+guest.gift.price.to_s+" ["+guest.gift.id.to_s+"]" if guest.gift %></td>
     <td><%= guest.iscoming %></td>
     <td><%= link_to 'Show', guest %></td>
     <td><%= link_to 'Edit', edit_guest_path(guest) %></td>

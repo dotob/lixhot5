@@ -5,6 +5,11 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+.tinymessage {
+  font-size:   11px;
+	color:#fff;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
