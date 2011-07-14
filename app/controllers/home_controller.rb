@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
   def index
 		guest_count = Guest.find_all_by_iscoming(true).count + 20
-		@somegifts = Gift.where("guest_count <= ?", guest_count) 
+		@somegifts = Gift.where("guest_count <= ?", guest_count).find_all{|g| g.guest.nil?}
 		respond_with(@somegifts)
   end
 
