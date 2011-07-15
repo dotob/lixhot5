@@ -5,7 +5,7 @@ class GuestsController < ApplicationController
   # GET /guests
   # GET /guests.xml
   def index
-		respond_with(@guests = Guest.all)
+		respond_with(@guests = Guest.order(:id))
   end
 
   # GET /guests/1
