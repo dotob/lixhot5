@@ -27,7 +27,7 @@
 				<%= text_area_tag(:message, nil, :size => "25x9") %>
 				<br />
 				<%= label_tag '  dein partyanteil:' %>
-				<%= select_tag(:gift_id, options_for_select(@somegifts.map { |gift| ['%s für %s€' % [gift.name, gift.price], gift.id] if gift.guest.nil?}) ) %><br />
+				<%= select_tag(:gift_id, options_for_select(@somegifts.map { |gift| ['%s' % gift.name, gift.id]}) ) %><br />
 				<%= submit_tag(value = "let's party") %>
 			</div>
 			<div id="three_no">
