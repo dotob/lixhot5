@@ -41,7 +41,7 @@ class GuestsController < ApplicationController
   # POST /guests.xml
   def create
     @guest = Guest.new(params[:guest])
-
+		@guest.iscoming = nil;
     respond_to do |format|
       if @guest.save
         format.html { redirect_to(@guest, :notice => 'Guest was successfully created.') }
