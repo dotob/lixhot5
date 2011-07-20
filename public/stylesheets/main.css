@@ -28,7 +28,7 @@ html, body{
  position: relative; 
 }
 
-#one, #two, #three_yes, #three_no, #two_link, #three_link{
+#one, #two, #three_yes, #three_no, #two_link, #three_link, #four{
 	display: table-cell;
 	text-align: center;
 	top: 50%;
@@ -36,7 +36,7 @@ html, body{
 	padding: 5px;
 }
 
-#one_frame, #two_frame, #three_frame{
+#one_frame, #two_frame, #three_frame, #four_frame{
 	height: 250px;
 	border-width: 1px;
 	border-color: #999;
