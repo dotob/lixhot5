@@ -2,7 +2,7 @@ class GiftsController < ApplicationController
   # GET /gifts
   # GET /gifts.xml
   def index
-    @gifts = Gift.all
+    @gifts = Gift.order(:name)
 
     respond_to do |format|
       format.html # index.html.erb

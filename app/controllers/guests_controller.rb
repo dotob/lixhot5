@@ -34,7 +34,7 @@ class GuestsController < ApplicationController
   # GET /guests/1/edit
   def edit
     @guest = Guest.find(params[:id])
-		@gifts = [] + Gift.all.map {|g| [g.name, g.id] }
+		@gifts = [] + Gift.all.map {|g| [g.name, g.id] if g.guest.nil? }
   end
 
   # POST /guests
