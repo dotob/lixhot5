@@ -8,9 +8,9 @@ class MassMailerController < ApplicationController
 	def doit
 		@recipients = Array.new()
 		# check for single id
-		if params[:guest_id]
+		if !params[:guest_id].nil? && params[:guest_id].to_i>0
 			@recipients << Guest.find(params[:guest_id])
-		elsif params[:guest_ids]
+		elsif !params[:guest_ids].nil? && params[:guest_ids].length>0
 			for gid in %w(params[:guest_ids]) do
 				@recipients << Guest.find(gid)
 			end
