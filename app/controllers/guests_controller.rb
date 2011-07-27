@@ -8,6 +8,10 @@ class GuestsController < ApplicationController
 		respond_with(@guests = Guest.order(:id))
   end
 
+	def allmails
+		respond_with(@guests=Guest.order(:email))
+	end
+
   # GET /guests/1
   # GET /guests/1.xml
   def show

@@ -9,7 +9,7 @@
 <% @guests.each do |guest| %>
   <tr>
     <td><%= guest.name %></td>
-    <td><%= guest.gift.name %></td>
+    <td><%= guest.gift.name if guest.gift %></td>
   </tr>
 <% end %>
 </table>
