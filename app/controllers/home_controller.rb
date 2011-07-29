@@ -17,4 +17,7 @@ class HomeController < ApplicationController
 		respond_with(@somegifts)
   end
 
+	def index_hidden
+		self.index
+	end
 end

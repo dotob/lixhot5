@@ -10,6 +10,7 @@ Lixhot::Application.routes.draw do
 	match 'massmailer' => 'mass_mailer#index'
 	match 'massmailer/doit' => 'mass_mailer#doit'
 	match 'allmails' => 'guests#allmails'
+	match 'go_30072011' => 'home#index_hidden'
 
   get "home/index"
 
