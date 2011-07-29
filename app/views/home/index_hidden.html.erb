@@ -1,0 +1,49 @@
+<%= javascript_include_tag 'main' %>
+
+<%= javascript_tag("$(function(){ memo.init(\"#{findguest_url}\"); });") %>
+<div id="rectangles">
+	<div id="one_frame">
+		<div id="one">
+			<%= label_tag ' deine email:' %>
+			<%= email_field_tag :search, params[:search] %><br />
+		</div>
+	</div>
+
+	<%= form_tag 'checkin', :method => 'get' do %>
+		<%= hidden_field_tag 'guest_id', '-1' %>
+	
+		<div id="two_frame">
+			<div id="two_link"><%= link_to 'gucken wer mitfeiert', whoscoming_path, :id => "whocomes" %> </div>
+			<div id="two">
+ 				<%= radio_button_tag(:iscoming, 1) %>ich komme<br />
+				<%= radio_button_tag(:iscoming, 0) %>ich komme nicht
+			</div>
+		</div>
+
+		<div id="three_frame">
+			<div id="three_link"><%= link_to 'bin zu spät, will doch noch mitfeiern', wannabeaguest_path, :id => "wannabeaguest"  %></div>
+			<div id="three_yes">
+				<%= label_tag '  wenn du uns was sagen möchtest:' %>
+				<%= text_area_tag(:message, nil, :size => "25x9") %>
+				<br />
+				<%= label_tag '  dein partyanteil:' %>
+				<%= select_tag(:gift_id, options_for_select(@somegifts.map { |gift| ['%s' % gift.name, gift.id]}) ) %><br />
+				<%= submit_tag(value = "let's party") %>
+			</div>
+			<div id="three_no">
+				<%= submit_tag(value = "sorry no party") %>
+			</div>
+		</div>
+		<div id="four_frame">
+        <div id="four">
+                <a href="http://www.youtube.com/watch?v=AiVc1NGBjjY">Einstimmung1</a><br />
+                <a href="http://www.youtube.com/watch?v=P55jFCUIHcg">Einstimmung2</a><br />
+                <a href="http://www.youtube.com/watch?v=Md5XsSl3CEg">Einstimmung3</a>
+
+        </div>
+		</div>
+
+	<% end %> <!-- of form -->
+</div>
+
+
