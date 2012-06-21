@@ -3,7 +3,7 @@ class CheckinController < ApplicationController
 	respond_to :html, :xml, :json
 
 	def doit
-    @guest = Guest.find(params[:guest_id])
+		@guest = Guest.find(params[:guest_id])
 		if @guest
 			@guest.message = params[:message]
 			if params[:iscoming] == "1"

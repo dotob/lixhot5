@@ -1,13 +1,7 @@
-for i in (1..10) do
-	Gift.create!({:name => "Cachaca", :price => 10, :guest_count => i*5})
-	Gift.create!({:name => "Triple Sec", :price => 10, :guest_count => i*5})
-	Gift.create!({:name => "Tequila", :price => 10, :guest_count => i*5})
-	Gift.create!({:name => "Wodka", :price => 8, :guest_count => i*5})
-end
 for i in (1..50) do
-	Gift.create!({:name => "Unkostenbeitrag", :price => 8, :guest_count => i*2})
-	Gift.create!({:name => "Unkostenbeitrag", :price => 12, :guest_count => i*2})
-	Gift.create!({:name => "Unkostenbeitrag", :price => 16, :guest_count => i*2})
+	Gift.create!({:name => "10€ Unkostenbeitrag", :price => 10, :guest_count => i*2})
+	Gift.create!({:name => "15€ Unkostenbeitrag", :price => 15, :guest_count => i*2})
+	Gift.create!({:name => "20€ Unkostenbeitrag", :price => 20, :guest_count => i*2})
 end
 
 Guest.create!({:name => "Alessandro Vitale", :email => "alessandrovitale@libero.it", :gift => nil})
