@@ -18,7 +18,7 @@ pre {
 
 a { color: #666; text-decoration: none; }
 a:visited { color: #999; text-decoration: none;}
-a:hover { color: #fff; background-color:#000; text-decoration: none;}
+a:hover { color: #fff; background-color:#999; text-decoration: none;}
 
 div.field, div.actions {
   margin-bottom: 10px;
